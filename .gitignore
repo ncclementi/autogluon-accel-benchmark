@@ -1,0 +1,8 @@
+# CSV files
+*.csv
+
+# Markdown files
+*.md
+
+# AutogluonModels directory and all contents
+AutogluonModels/
