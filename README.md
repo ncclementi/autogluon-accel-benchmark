@@ -18,5 +18,8 @@ default settings that cuml runs when passing no args to `TablePredictor`. It run
 
 The script above run and will create some files with results, to get a better understanding of the results run `generate_md_report.py`
 
+### First attempt report
+
+See https://github.com/ncclementi/autogluon-accel-benchmark/issues/1
 
 
