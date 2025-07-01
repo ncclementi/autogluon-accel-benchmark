@@ -1,6 +1,13 @@
 # autogluon-accel-benchmark
 Some initial test to attempt to benchmark cuml accel usage with autogluon
 
+### Create env with conda
+
+```bash
+conda env create -f autogluon-rapids-nightly.yaml
+conda activate rapids-nightly-autogluon
+```
+
 ### `run_benchmark.py`
 
 It runs a synthetic example for sample sizes of 1K, 10K, 100K, 1M, 10M for the

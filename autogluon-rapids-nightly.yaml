@@ -1,0 +1,12 @@
+name: rapids-nightly-autogluon
+channels:
+  - conda-forge
+  - rapidsai-nightly
+  - nvidia
+dependencies:
+  - python=3.12 
+  - cuml=25.8
+  - cudf=25.8
+  - autogluon=1.3.1
+  - 'cuda-version>=12.0,<=12.8'
+  - 'pytorch=*=cuda*' #docs says is needed for gpu
