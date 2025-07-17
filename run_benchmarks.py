@@ -34,11 +34,11 @@ def run_benchmark_for_sample_size(display_name, n_samples):
     
     # Run sklearn mode
     print('Running sklearn mode...')
-    subprocess.run([sys.executable, SCRIPT, '--mode', 'sklearn', '--output', leaderboard_sklearn, '--n_samples', str(n_samples)], check=True)
+    subprocess.run([sys.executable, SCRIPT, '--output', leaderboard_sklearn, '--n_samples', str(n_samples)], check=True)
 
     # Run cuml mode
     print('Running cuml mode...')
-    subprocess.run([sys.executable, '-m', 'cuml.accel', SCRIPT, '--mode', 'cuml', '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
+    subprocess.run([sys.executable, '-m', 'cuml.accel', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
 
     # Compare results
     if os.path.exists(leaderboard_sklearn) and os.path.exists(leaderboard_cuml):

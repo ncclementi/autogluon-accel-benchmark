@@ -8,11 +8,9 @@ import os
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices=['sklearn', 'cuml'], required=True, help='Backend mode: sklearn or cuml')
     parser.add_argument('--output', type=str, required=True, help='Output CSV filename for leaderboard')
     parser.add_argument('--n_samples', type=int, default=100000, help='Number of samples to generate')
     args = parser.parse_args()
-    mode = args.mode
     output_file = args.output
     n_samples = args.n_samples
 
@@ -41,9 +39,6 @@ def main():
     leaderboard = predictor.leaderboard()
 
     # Save leaderboard to CSV in leaderboard directory
-    # leaderboard_dir = 'leaderboards-per-sample-size'
-    # os.makedirs(leaderboard_dir, exist_ok=True)
-    # output_path = os.path.join(leaderboard_dir, output_file)
     leaderboard.to_csv(output_file, index=False)
 
 
