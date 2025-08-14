@@ -40,6 +40,10 @@ def run_benchmark_for_sample_size(display_name, n_samples):
     print('Running cuml mode...')
     subprocess.run([sys.executable, '-m', 'cuml.accel', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
 
+    #Use this to run some profiling
+    # subprocess.run([sys.executable, '-m', 'cuml.accel', '-vv', '--profile', '--line-profile', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
+
+
     # Compare results
     if os.path.exists(leaderboard_sklearn) and os.path.exists(leaderboard_cuml):
         print(f'\nComparing {leaderboard_sklearn} and {leaderboard_cuml} (score_val, fit_time):')
