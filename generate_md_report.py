@@ -35,8 +35,11 @@ def generate_simple_report(results_dir, output_file):
         report_lines.append(f"## {sample_size_name} Samples ({n_samples:,})")
         report_lines.append("")
         
+        # Filter out WeightedEnsemble_L2 models
+        df_filtered = df[df['model'] != 'WeightedEnsemble_L2']
+        
         # Convert dataframe to markdown table
-        table_md = df.to_markdown(index=False)
+        table_md = df_filtered.to_markdown(index=False)
         report_lines.append(table_md)
         report_lines.append("")
     
