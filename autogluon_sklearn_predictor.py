@@ -1,6 +1,3 @@
-import cudf.pandas
-cudf.pandas.install()
-
 import pandas as pd
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
@@ -18,7 +15,6 @@ def main():
     # Generate binary classification data
     X, y = make_classification(n_samples=n_samples, n_features=10, n_informative=5, n_classes=2)
     df = pd.DataFrame(X, columns=[f"feature_{i}" for i in range(X.shape[1])])
-    # print('?????????',type(type(df)))
     df["target"] = y
 
     # Split into train/test
