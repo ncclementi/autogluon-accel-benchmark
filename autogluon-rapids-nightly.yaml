@@ -5,8 +5,8 @@ channels:
   - nvidia
 dependencies:
   - python=3.12 
-  - cuml=25.8
-  - cudf=25.8
+  - cuml=25.10
+  - cudf=25.10
   - autogluon=1.4
   - 'cuda-version>=12.0,<=12.8'
-  - 'pytorch=*=cuda*' #docs says is needed for gpu
+  - 'pytorch=*=cuda*' #autogluon docs says is needed for gpu
