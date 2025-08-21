@@ -25,12 +25,12 @@ def main():
     predictor = TabularPredictor(label=label).fit(
         train_data=train_data, 
         hyperparameters={
-        'LR': {}, 
+        'LR': {"random_state": None},
         'KNN': [{'weights': 'uniform', 'ag_args': {'name_suffix': 'Unif'}}, 
             # {'weights': 'distance', 'ag_args': {'name_suffix': 'Dist'}} #not supported by cuml
             ],
-        'RF': [{'criterion': 'gini', 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}}, 
-           {'criterion': 'entropy', 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}}, 
+        'RF': [{'criterion': 'gini', "random_state": None, 'ag_args': {'name_suffix': 'Gini', 'problem_types': ['binary', 'multiclass']}},
+           {'criterion': 'entropy', "random_state": None, 'ag_args': {'name_suffix': 'Entr', 'problem_types': ['binary', 'multiclass']}},
            ]
         })
 

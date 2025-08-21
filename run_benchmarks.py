@@ -40,6 +40,11 @@ def run_benchmark_for_sample_size(display_name, n_samples):
     print('Running cuml mode...')
     subprocess.run([sys.executable, '-m', 'cuml.accel', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
 
+    # Run cuml mode with cudf.pandas
+    # comment cuml mode and run this instead
+    # print('Running cuml mode with cudf.pandas...')
+    # subprocess.run([sys.executable, '-m', 'cuml.accel', '-m', 'cudf.pandas', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
+
     #Use this to run some profiling
     # subprocess.run([sys.executable, '-m', 'cuml.accel', '-vv', '--profile', '--line-profile', SCRIPT, '--output', leaderboard_cuml, '--n_samples', str(n_samples)], check=True)
 
