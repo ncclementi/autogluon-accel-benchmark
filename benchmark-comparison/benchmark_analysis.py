@@ -373,7 +373,7 @@ def create_sklearn_performance_plot(comparison_dataframes_sklearn, sample_sizes,
         # Customize
         ax.set_xlabel('Sample Size')
         ax.set_ylabel('Execution Time (seconds)')
-        ax.set_title(f'{model} Performance')
+        ax.set_title(f'{model.upper()} Performance')
         ax.set_xticks(x + width/2)
         ax.set_xticklabels(sample_labels)
         ax.legend()
