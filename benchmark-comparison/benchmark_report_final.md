@@ -4,6 +4,7 @@
 - All reported values are **median of 5 runs**
 - Speedup calculations: CPU_time / GPU_time
 - Sample sizes: 100K, 1M, 5M data points
+- **GPU runs:** we simply add `-m cuml.accel` to the script command. For the `cuml_cudf` case, also add `-m cudf.pandas`.
 
 ## Performance Comparison Plots
 
