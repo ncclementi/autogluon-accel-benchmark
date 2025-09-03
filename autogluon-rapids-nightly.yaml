@@ -8,5 +8,5 @@ dependencies:
   - cuml=25.10
   - cudf=25.10
   - autogluon=1.4
-  - 'cuda-version>=12.0,<=12.8'
+  - 'cuda-version>=12.0,<=12.9'
   - 'pytorch=*=cuda*' #autogluon docs says is needed for gpu
