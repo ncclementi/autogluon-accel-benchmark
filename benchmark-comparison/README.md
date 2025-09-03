@@ -1,6 +1,7 @@
 # Benchmark Comparison Directory
 
-Benchmarks AutoGluon vs scikit-learn performance across CPU/GPU configurations (100K-5M samples, LR/RF/KNN models).
+Benchmarks AutoGluon vs scikit-learn performance across CPU/GPU configurations (100K, 1M, 5M samples, LR/RF/KNN models).
+We perform 5 runs of each model and took the median time of training. 
 
 ## Files
 
